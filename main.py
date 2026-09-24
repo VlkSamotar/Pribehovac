@@ -126,13 +126,15 @@ class StoryPianoApp(arcade.Window):
             self.words.append(word_sprite)
 
         # Vytvoření zeleného tlačítka PLAY
-        self.play_button = arcade.SpriteSolidColor(140, 45, arcade.color.APPLE_GREEN)
+        self.play_button = arcade.SpriteSolidColor(140, 45, arcade.color.WHITE)
+        self.play_button.color = arcade.color.APPLE_GREEN
         self.play_button.center_x = 300
         self.play_button.center_y = 200
         self.buttons.append(self.play_button)
 
         # Vytvoření červeného tlačítka RESET
-        self.reset_button = arcade.SpriteSolidColor(140, 45, arcade.color.RED)
+        self.reset_button = arcade.SpriteSolidColor(140, 45, arcade.color.WHITE)
+        self.reset_button.color = arcade.color.RED
         self.reset_button.center_x = 500
         self.reset_button.center_y = 200
         self.buttons.append(self.reset_button)
@@ -174,7 +176,7 @@ class StoryPianoApp(arcade.Window):
             "PLAY ▶", 
             self.play_button.center_x, 
             self.play_button.center_y, 
-            arcade.color.RED, 
+            arcade.color.WHITE, 
             font_size=13, 
             bold=True, 
             anchor_x="center", 
@@ -185,7 +187,7 @@ class StoryPianoApp(arcade.Window):
             "RESET 🔄", 
             self.reset_button.center_x, 
             self.reset_button.center_y, 
-            arcade.color.RED, 
+            arcade.color.WHITE, 
             font_size=13, 
             bold=True, 
             anchor_x="center", 
